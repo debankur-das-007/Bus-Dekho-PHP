@@ -1,0 +1,24 @@
+.top-navbar
+{
+    padding: 0px var(--side-padding);
+    margin-top: 16px;
+    z-index: 3;
+}
+.bottom-navbar
+{
+    bottom: 0px;
+    padding: 0 var(--side-padding);
+    padding-top: 12px;
+    padding-bottom: 8px;
+    gap: 96px;
+    z-index: 4;
+}
+#side-navigation
+{
+    left: -75vw;
+    top: 0px;
+    width: 75vw;
+    min-height: 100vh;
+    z-index: 8;
+    transition: 0.5s ease-in-out;
+}

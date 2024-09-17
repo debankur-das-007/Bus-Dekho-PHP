@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    color: var(--theme-color-3);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar
+{
+    display: none; /* for Chrome, Safari, and Opera */
+}
+:focus
+{
+    outline: none;
+    border: none;
+}
+:root
+{
+    --theme-color-1: #00245c;
+    --theme-color-2: #FFFFFF;
+    --side-padding: 16px;
+}
+:disabled
+{
+    background-color: white;
+}
+.container
+{
+    padding: 0px var(--side-padding);
+    margin-bottom: 72px;
+    z-index: 3;
+}
+.text-center
+{
+    text-align: center;
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+.resize-x
+{
+    resize: horizontal;
+}
+.resize-y
+{
+    resize: vertical;
+}
+.overflow-x-scroll
+{
+    overflow-x: auto;
+}
+
+/*#region Colors*/
+.bg-color-1
+{
+    background-color: var(--theme-color-1);
+}
+.bg-color-2
+{
+    background-color: var(--theme-color-2);
+}
+.color-1
+{
+    color: var(--theme-color-1);
+}
+.color-2
+{
+    color: var(--theme-color-2);
+}
+.color-green
+{
+    color: rgb(50, 192, 50);
+}
+.color-red
+{
+    color: rgb(192, 50, 50);
+}
+.color-gray
+{
+    color: rgb(92, 92, 92);
+}
+/*#endregion*/
+
+/*#region Position*/
+.relative
+{
+    position: relative;
+}
+.absolute
+{
+    position: absolute;
+}
+.fixed
+{
+    position: fixed;
+}
+/*#endregion*/
+
+/*#region Width*/
+.w100-percent
+{
+    width: 100%;
+}
+.w100-vw
+{
+    width: 100vw;
+}
+.w300-px
+{
+    width: 300px;
+}
+.w-fitcontent
+{
+    width: fit-content;
+}
+/*#endregion*/
+
+/*#region Height*/
+.h100-vh
+{
+    height: 100vh;
+}
+.h2-px
+{
+    height: 2px;
+}
+/*#endregion*/
+
+/*#region Flex*/
+.flex
+{
+    display: flex;
+}
+.flex-column
+{
+    flex-direction: column;
+}
+.flex-wrap
+{
+    flex-wrap: wrap;
+}
+.justify-center
+{
+    justify-content: center;
+}
+.justify-between
+{
+    justify-content: space-between;
+}
+.justify-end
+{
+    justify-content: end;
+}
+.align-center
+{
+    align-items: center;
+}
+.align-start
+{
+    align-items: start;
+}
+.align-end
+{
+    align-items: end;
+}
+.gap-4
+{
+    gap: 4px;
+}
+.gap-8
+{
+    gap: 8px;
+}
+.gap-16
+{
+    gap: 16px;
+}
+.gap-32
+{
+    gap: 32px;
+}
+.gap-64
+{
+    gap: 64px;
+}
+.flex-wrap
+{
+    flex-wrap: wrap;
+}
+/*#endregion*/
+
+/*#region Margins*/
+.my-8
+{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.my-16
+{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.my-32
+{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.my-64
+{
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+/*#endregion*/
+
+/*#region Paddings*/
+.px-8
+{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.px-16
+{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.px-32
+{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.py-8
+{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.py-16
+{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.py-32
+{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+/*#endregion*/
+
+/*#region Font Sizes*/
+.font-14
+{
+    font-size: 14px;
+}
+.font-16
+{
+    font-size: 16px;
+}
+.font-18
+{
+    font-size: 18px;
+}
+.font-20
+{
+    font-size: 20px;
+}
+.font-22
+{
+    font-size: 22px;
+}
+.font-28
+{
+    font-size: 28px;
+}
+.font-32
+{
+    font-size: 32px;
+}
+.font-36
+{
+    font-size: 36px;
+}
+.font-64
+{
+    font-size: 64px;
+}
+/*#endregion*/
+
+/*#region Border Radius*/
+.br-8
+{
+    border-radius: 8px;
+}
+.br-top-16
+{
+    border-radius: 16px 16px 0px 0px;
+}
+/*#endregion*/
+.bs-8
+{
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+}
+.input-field
+{
+    border: 2px solid var(--theme-color-3);
+    padding: 10px 15px;
+}
+.background-panel
+{
+    top: 0px;
+    height: 200px;
+    width: 100vw;
+    z-index: 0;
+}
+.marker
+{
+    padding: 2px 8px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 4px;
+}
+#map
+{
+    height: calc(100vh - 32px - 65px - 187px + 45px + 35px); /* -140px */
+}
+#drawable-bus-info
+{
+    transition: 0.25s ease-in-out;
+}
+.res-image-001
+{
+    width: 28vw;
+    height: 28vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.res-image-001 > img
+{
+    height: 50%;
+}
+.res-image-001 > div
+{
+    line-height: 14.5px;
+}
+.input-field
+{
+    border: 2px solid var(--theme-color-1);
+    color: var(--theme-color-1);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+}
+.overlay
+{
+    display: none;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 9;
+}
+.base-form
+{
+    width: 90%;
+    background-color: #FFFFFF;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
