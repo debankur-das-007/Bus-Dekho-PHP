@@ -13,6 +13,7 @@
     <body>
         <div class="background-panel absolute bg-color-1"></div>
         <?php include("./topNavigation.php") ?>
+        <?php include("./sideNavigation.php") ?>
         <div class="container relative">
             <div style="margin-top: 64px; margin-bottom: 32px;">
                 <div class="font-28 color-2">Routes</div>
@@ -23,13 +24,13 @@
                     <div class="font-22" style="line-height: 20px;">Routes</div>
                     <div class="bg-color-1" style="height: 2px;"></div>
                     <div class="flex gap-8">
-                        <div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2" onclick="toggleOverlay(0)">Create Route</div>
-                        <div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2">View Routes</div>
+                        <a href="routeCreate.php"><div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2" onclick="toggleOverlay(0)">Create Route</div></a>
+                        <a href="routeView.php"><div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2">View Routes</div></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="overlay flex align-center justify-center absolute">
+        <!-- <div class="overlay flex align-center justify-center absolute">
             <form class="base-form flex flex-column gap-16 px-16 py-16 br-8 bs-8" method="POST">
                 <div class="font-28 color-1">Add Bus Lineup</div>
                 <div class="flex flex-column gap-8">
@@ -59,7 +60,7 @@
                 <input class="input-field font-16" type="submit" name="submit">
                 <input class="input-field font-16" type="button" value="Cancel" onclick="toggleOverlay(0)">
             </form>
-        </div>
+        </div> -->
     </body>
     <script src="./../js/script.js"></script>
 </html>

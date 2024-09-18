@@ -12,6 +12,7 @@
     <body>
         <div class="background-panel absolute bg-color-1"></div>
         <?php include("./topNavigation.php") ?>
+        <?php include("./sideNavigation.php") ?>
         <div class="container relative">
             <div class="my-16">
                 <div class="font-18 color-2">Good Morning</div>
@@ -39,4 +40,5 @@
             </div>
         </div>
     </body>
+    <script src="./../js/script.js"></script>
 </html>

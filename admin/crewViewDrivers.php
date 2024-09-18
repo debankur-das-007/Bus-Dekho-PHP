@@ -16,29 +16,21 @@
         <?php include("./sideNavigation.php") ?>
         <div class="container relative">
             <div style="margin-top: 64px; margin-bottom: 32px;">
-                <div class="flex align-center font-28 color-2">Buses >&nbsp;<div class="font-14">View Lineups</div></div>
-                <div class="font-14 color-2">Manage your bus lineups here</div>
+                <div class="flex align-center font-28 color-2">Crews >&nbsp;<div class="font-14">View Drivers</div></div>
+                <div class="font-14 color-2">Manage your drivers here</div>
             </div>
             <div class="flex flex-column gap-16">
                 <?php
-                    $query = "SELECT * FROM `bus_lineup_master`";
+                    $query = "SELECT * FROM `driver_master`";
                     $data = mysqli_query($connection, $query);
                     while($ar = mysqli_fetch_array($data))
                     {
                 ?>
                         <div class="flex align-center gap-16 px-16 py-8 br-8 bs-8 bg-color-2">
                             <div class="flex flex-column gap-8 w100-percent">
-                                <div class="flex justify-between align-center">
-                                    <div class="font-20">Color: <?php echo $ar['color']; ?></div>
-                                    <div class="font-16">Bus Count: <?php echo $ar['count']; ?></div>
-                                </div>
-                                <div class="flex justify-between align-center">
-                                    <div class="flex align-center gap-8">
-                                        <div class="marker color-1"><?php echo $ar['fuel_type']; ?></div>
-                                        <div class="marker color-1"><?php echo $ar['bus_type']; ?></div>
-                                    </div>
-                                </div>
-                                <div class="font-14">Capacity: <?php echo $ar['capacity']; ?></div>
+                                <div class="font-18"><span class="color-1">Name:</span> <?php echo $ar['first_name']." ".$ar['middle_name']." ".$ar['last_name']; ?></div>
+                                <div class="font-16"><span class="color-1">Phone:</span> <?php echo $ar['phone']; ?></div>
+                                <div class="font-16"><span class="color-1">D.O.B:</span> <?php echo $ar['dob']; ?></div>
                             </div>
                             <div>
                                 <img src="./../res/icons/edit.svg" alt="" width="24px">

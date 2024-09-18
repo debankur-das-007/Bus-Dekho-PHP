@@ -54,6 +54,7 @@
     <body>
         <div class="background-panel absolute bg-color-1"></div>
         <?php include("./topNavigation.php") ?>
+        <?php include("./sideNavigation.php") ?>
         <div class="container relative">
             <div style="margin-top: 64px; margin-bottom: 32px;">
                 <div class="font-28 color-2">Buses</div>
@@ -64,7 +65,7 @@
                     <div class="font-22" style="line-height: 20px;">Bus</div>
                     <div class="bg-color-1" style="height: 2px;"></div>
                     <div class="flex gap-8">
-                        <div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2" onclick="toggleOverlay(0)">Add Bus</div>
+                        <div class="px-16 py-8 font-18 br-8 bs-8 cursor-pointer bg-color-2" onclick="toggleOverlay(0)">Add Bus</div>
                         <a href="busView.php"><div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2">View Buses</div></a>
                     </div>
                 </div>
@@ -72,8 +73,8 @@
                     <div class="font-22" style="line-height: 20px;">Bus Lineup</div>
                     <div class="bg-color-1" style="height: 2px;"></div>
                     <div class="flex gap-8">
-                        <div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2" onclick="toggleOverlay(1)">Add Lineup</div>
-                        <div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2">View Lineups</div>
+                        <div class="px-16 py-8 font-18 br-8 bs-8 cursor-pointer bg-color-2" onclick="toggleOverlay(1)">Add Lineup</div>
+                        <a href="busLineups.php"><div class="px-16 py-8 font-18 br-8 bs-8 bg-color-2">View Lineups</div></a>
                     </div>
                 </div>
             </div>

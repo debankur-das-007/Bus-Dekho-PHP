@@ -1,4 +1,4 @@
-<div id="side-navigation" class="flex flex-column gap-8 absolute bs-8 bg-color-2">
+<div id="side-navigation" class="flex flex-column gap-8 absolute bs-8 bg-color-2" style="border-radius: 0px 8px 8px 0px;">
     <div class="flex justify-end px-16" style="margin-top: 16px;">
         <img src="./../res/icons/cross.svg" alt="" width="24px" onclick="toggleSideNav()">
     </div>

@@ -133,12 +133,12 @@ CREATE TABLE `conductor_master` (
   `first_name` varchar(128) DEFAULT NULL,
   `middle_name` varchar(128) DEFAULT NULL,
   `last_name` varchar(128) DEFAULT NULL,
-  `phone` int DEFAULT NULL,
+  `phone` varchar(10) DEFAULT NULL,
   `password` varchar(64) DEFAULT NULL,
   `dob` date DEFAULT NULL,
   `activity` tinyint DEFAULT '1',
   PRIMARY KEY (`conductor_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,6 +147,7 @@ CREATE TABLE `conductor_master` (
 
 LOCK TABLES `conductor_master` WRITE;
 /*!40000 ALTER TABLE `conductor_master` DISABLE KEYS */;
+INSERT INTO `conductor_master` VALUES (1,'Conductor',NULL,'1','987654321','202cb962ac59075b964b07152d234b70','1992-12-12',1);
 /*!40000 ALTER TABLE `conductor_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -186,12 +187,12 @@ CREATE TABLE `driver_master` (
   `first_name` varchar(128) DEFAULT NULL,
   `middle_name` varchar(128) DEFAULT NULL,
   `last_name` varchar(128) DEFAULT NULL,
-  `phone` int DEFAULT NULL,
+  `phone` varchar(10) DEFAULT NULL,
   `password` varchar(64) DEFAULT NULL,
   `dob` date DEFAULT NULL,
   `activity` tinyint DEFAULT '1',
   PRIMARY KEY (`driver_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -200,7 +201,7 @@ CREATE TABLE `driver_master` (
 
 LOCK TABLES `driver_master` WRITE;
 /*!40000 ALTER TABLE `driver_master` DISABLE KEYS */;
-INSERT INTO `driver_master` VALUES (1,'Test',NULL,'Driver',1234567890,'202cb962ac59075b964b07152d234b70',NULL,1);
+INSERT INTO `driver_master` VALUES (1,'Test',NULL,'Driver','1234567890','202cb962ac59075b964b07152d234b70','1993-04-23',1),(2,'Test','Driver','2','2345678901','caf1a3dfb505ffed0d024130f58c5cfa','1988-12-18',1);
 /*!40000 ALTER TABLE `driver_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -213,14 +214,12 @@ DROP TABLE IF EXISTS `route_master`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `route_master` (
   `route_id` int NOT NULL AUTO_INCREMENT,
-  `route_number` varchar(64) NOT NULL,
-  `route_name` varchar(128) NOT NULL,
-  `start_location` varchar(256) NOT NULL,
-  `end_location` varchar(256) NOT NULL,
-  ` start_time` time NOT NULL,
-  `end_time` time NOT NULL,
+  `route_name` varchar(128) DEFAULT NULL,
+  `from` varchar(256) DEFAULT NULL,
+  `to` varchar(256) DEFAULT NULL,
+  `geojson_path` varchar(512) DEFAULT NULL,
   PRIMARY KEY (`route_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -229,6 +228,7 @@ CREATE TABLE `route_master` (
 
 LOCK TABLES `route_master` WRITE;
 /*!40000 ALTER TABLE `route_master` DISABLE KEYS */;
+INSERT INTO `route_master` VALUES (1,'Route 66','New Delhi Railway Station','Indigo Terminal 1 IGI Airport','./../routes/Route 66.geojson');
 /*!40000 ALTER TABLE `route_master` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,4 +294,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-18  2:29:52
+-- Dump completed on 2024-09-19  2:50:34

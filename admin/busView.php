@@ -13,6 +13,7 @@
     <body>
         <div class="background-panel absolute bg-color-1"></div>
         <?php include("./topNavigation.php") ?>
+        <?php include("./sideNavigation.php") ?>
         <div class="container relative">
             <div style="margin-top: 64px; margin-bottom: 32px;">
                 <div class="flex align-center font-28 color-2">Buses >&nbsp;<div class="font-14">View Buses</div></div>
